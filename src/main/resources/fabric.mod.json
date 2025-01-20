@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "challenges",
+	"version": "${version}",
+	"name": "challenges",
+	"description": "A mod which adds a lot of challenges to Minecraft which can be started and managed by commands",
+	"authors": [
+		"Ricardo Locher"
+	],
+	"contact": {
+		"homepage": "https://ricardolocher.github.io",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/challenges/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"ricardo.challenges.Challenges"
+		],
+		"fabric-datagen": [
+			"ricardo.challenges.ChallengesDataGenerator"
+		],
+		"client" : [
+			"ricardo.challenges.ChallengesClient"
+		]
+	},
+	"mixins": [
+		"challenges.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.2",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
